@@ -10,14 +10,14 @@
     <body> 
         <h1>Evolve</h1>
         <h2>Monitor</h2>
+
         <div id="bluninter">
         <span class="comparar"><input  type="checkbox" name="Horas:" value="hrs"> Comparar</span>
             <DIV class="bloco" id="blococor">
                 <H2>Uninter</H2>
                 <ul>
-                <div class="questoes"><li>Horas totais: <input type="text" name="Horas:"></li></div>
-                <div class="questoes"><li>Dias totais: <input type="number" name="Diatot:"></li></div>
-                <div class="questoes"><li>Média de horas: <input type="time" name="medhrs:"></li></div>
+                <div class="questoes" id="q1uninter"><li>Horas: <input type="text" name="Horas:"></li></div>
+                <div class="questoes" id="q2uninter"><li>Dias: <input type="number" name="Diatot:"></li></div>
                 </ul>
             </DIV>
         </div>
@@ -26,28 +26,52 @@
             <DIV  class="bloco" id="blococor">
                 <H2>Udemy</H2>
                 <ul>
-                <div class="questoes"><li>Horas totais: <input type="text" name="Horas:"></li></div>
-                <div class="questoes"><li>Dias totais: <input type="number" name="Diatot:"></li></div>
-                <div class="questoes"><li>Média de horas: <input type="time" name="medhrs:"></li></div>
+                <div class="questoes" id="q1udemy"><li>Horas totais: <input type="text" name="Horas:"></li></div>
+                <div class="questoes" id="q2udemy"><li>Dias totais: <input type="number" name="Diatot:"></li></div>
                 </ul>
             </DIV>
         </div>
         <div id="bllivros">
             <span class="comparar"><input type="checkbox" name="Horas:" value="hrs"> Comparar</span>
             <DIV  class="bloco" id="blococor">
-                <H2>Udemy</H2>
+                <H2>Livros</H2>
                 <ul>
-                <div class="questoes"><li>Horas totais: <input type="text" name="Horas:"></li></div>
-                <div class="questoes"><li>Dias totais: <input type="number" name="Diatot:"></li></div>
-                <div class="questoes"><li>Média de horas: <input type="time" name="medhrs:"></li></div>
+                <div class="questoes" id="q1livros"><li>Horas: <input type="text" name="Horas:"></li></div>
+                <div class="questoes" id="q2livros"><li>Diass: <input type="number" name="Diatot:"></li></div>
                 </ul>
             </DIV>
         </div>
+
+
         <div id="classblcomparar">
             <DIV id="blococor">
                 <H2>Comparar valores</H2>
-                testes
+                    <Div id="selecmat">
+                    Selecionar matérias:
+                        <ul>
+                            <li><input type="checkbox" name="checkUninter" id="checkUninter"></input>Uninter</li>
+                            <li><input type="checkbox" name="checkUdemy" id="checkUdemy"></input>Udemy</li>
+                            <li><input type="checkbox" name="checkLivros" id="checkLivros"></input>Livros</li>
+                        </ul>
+                    </Div>
+                <Div id="selecoper">
+                        <div>
+                           Operação: <select id="operacao">
+                                <option>Somar</option>
+                                <option>Media</option>
+                            </select>
+                        </div>
+                </Div>
+                <Div id="selecoper"> <!--renomear como resposta e aplicar css depois-->
+                    <div>
+                        Resultado
+                        <span id="resposta"></span>
+                    </div>
+            </Div>
             </DIV>
         </div>
+
+
+        <script src="monitor.js"></script>
     </body>
 </html>

@@ -1,4 +1,4 @@
-body{background-image: url(fundo.jpg)}
+body{background-image: url(fundo.jpg);}
 
 .bloco{
     width: 400px;
@@ -21,26 +21,48 @@ body{background-image: url(fundo.jpg)}
     padding:5px;
     margin:3px;
     width: 300px;
-border-radius: 10px;}
+    border-radius: 10px;}
 
-.questoes:hover{background-color: whitesmoke;
+.questoes:hover{
+    background-color: whitesmoke;
     font-size: 17px;
     font-weight:bold;
     border: 2px solid whitesmoke;}
 
+#selecmat, #selecoper{
+    border: 2px solid white;
+    background-color: white;
+    padding:5px;
+    margin:3px;
+    width: 150px;
+    border-radius: 10px;}
+
+#selecmat:hover{background-color: whitesmoke;
+    font-size: 17px;
+    font-weight:bold;}
+
+#selecoper:hover{background-color: whitesmoke;
+    font-size: 17px;
+    font-weight:bold;}   
+
 #classblcomparar{
     border: 1px solid lightblue;
-    width: 300px;
+    width: fit-content;
     padding-left: 10px;
     background-color: lightblue; 
     margin:10px;
     height: fit-content;
-    border-radius:20px;
-    text-align: center;}
+    border-radius:20px;}
 
-#classblcomparar:hover{box-shadow: 5px 5px grey}
+#classblcomparar:hover{
+    box-shadow: 5px 5px grey}
 
-.comparar{font-weight:  bold;
+.comparar{
+    font-weight:  bold;
     font-size: large;}
 
-#bluninter,#bludemy,#bllivros{display: inline-block;}
+#bluninter,#bludemy,#bllivros{
+    display: inline-block;}
+
+#selecmat, #selecoper{
+    display: inline-block;}
