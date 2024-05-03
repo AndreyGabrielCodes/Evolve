@@ -1,40 +1,46 @@
-.bloco{border: 1px solid lightgrey;
+body{background-image: url(fundo.jpg)}
+
+.bloco{
     width: 400px;
     padding-left: 10px;
-    background-color: lightgrey; 
     margin-left:10px;
     margin-top: 10px;
     height: fit-content;
-    border-radius:20px;
     }
+
+#blococor{
+    border: 1px solid lightblue;
+    background-color: lightblue;
+    border-radius:20px;}
 
 .bloco:hover{box-shadow: 5px 5px grey;}
 
-.questoes{border: 2px solid white;
+.questoes{
+    border: 2px solid white;
     background-color: white;
     padding:5px;
     margin:3px;
     width: 300px;
-border-radius: 10px}
+border-radius: 10px;}
 
 .questoes:hover{background-color: whitesmoke;
     font-size: 17px;
     font-weight:bold;
     border: 2px solid whitesmoke;}
 
-#blcomparar{border: 1px solid lightgrey;
+#classblcomparar{
+    border: 1px solid lightblue;
     width: 300px;
     padding-left: 10px;
-    background-color: lightgrey; 
-    margin-left:275px;
-    margin-top:15px;
+    background-color: lightblue; 
+    margin:10px;
     height: fit-content;
     border-radius:20px;
     text-align: center;}
 
-#blcomparar:hover{box-shadow: 5px 5px grey}
+#classblcomparar:hover{box-shadow: 5px 5px grey}
 
-#comparar{font-weight:  bold;
+.comparar{font-weight:  bold;
     font-size: large;}
 
-#bluninter,#bludemy{display: inline-block;}
+#bluninter,#bludemy,#bllivros{display: inline-block;}
