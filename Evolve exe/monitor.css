@@ -1,4 +1,8 @@
-body{background-image: url(fundo.jpg);}
+body{
+    background-image: url(fundo.png);}
+
+h1{
+    color:white;font-size: 50px;}
 
 .bloco{
     width: 400px;
@@ -13,7 +17,8 @@ body{background-image: url(fundo.jpg);}
     background-color: lightblue;
     border-radius:20px;}
 
-.bloco:hover{box-shadow: 5px 5px grey;}
+.bloco:hover{
+    box-shadow: 5px 5px grey;}
 
 .questoes{
     border: 2px solid white;
@@ -37,12 +42,12 @@ body{background-image: url(fundo.jpg);}
     width: 150px;
     border-radius: 10px;}
 
-#selecmat:hover{background-color: whitesmoke;
-    font-size: 17px;
+#selecmat:hover{
+    background-color: whitesmoke;
     font-weight:bold;}
 
-#selecoper:hover{background-color: whitesmoke;
-    font-size: 17px;
+#selecoper:hover{
+    background-color: whitesmoke;
     font-weight:bold;}   
 
 #classblcomparar{
