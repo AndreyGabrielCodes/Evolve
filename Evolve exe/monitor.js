@@ -6,9 +6,9 @@ const operacao = document.querySelector("#operacao");
 const executar = document.querySelector("#executar");
 let resposta = document.querySelector("#resposta");
 
-executar.addEventListener("click", calchoras);
+executar.addEventListener("click", calchrs);
 
-function calchoras() {
+function calchrs() {
         const q1uninter = document.getElementById("q1uninter");
         const q1udemy = document.getElementById("q1udemy");
         const q1livros = document.getElementById("q1livros");
@@ -16,9 +16,16 @@ function calchoras() {
         const vlq1udemy = parseInt(q1udemy.value);
         const vlq1livros = parseInt(q1livros.value);
         const selecao = operacao.value;
+        let respostafinal
     if (selecao === "somar")
-        if (cpuninter.checked == true)
-                resposta.innerHTML = vlq1uninter + vlq1udemy + " horas totais";;
+        if (cpuninter.checked == true && cpudemy.checked == true)
+            respostafinal = vlq1uninter + vlq1udemy;
+        else if (cpuninter.checked == true && cplivros.checked == true)
+            respostafinal = vlq1uninter + vlq1livros;
+        else if (cpudemy.checked == true && cplivros.checked == true)
+            respostafinal = vlq1udemy + vlq1livros;
+        return (resposta.innerHTML = respostafinal + " horas totais");      
+    ;
     if (selecao === "media")
         if (cpuninter.checked == true)
                 resposta.innerHTML = (vlq1uninter + vlq1udemy)/2 + " horas totais";;
