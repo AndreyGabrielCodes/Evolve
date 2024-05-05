@@ -6,6 +6,29 @@ const operacao = document.querySelector("#operacao");
 const executar = document.querySelector("#executar");
 let reshrs = document.querySelector("#reshrs");
 let resdias = document.querySelector("#resdias");
+let restatus = document.querySelector("#restatus");
+let statusint;
+let finalstatus;
+
+function status() {
+if ((cpuninter.checked == false && cpudemy.checked == false && cplivros.checked == false)
+    ||(cpuninter.checked == false && cpudemy.checked == false)
+    || (cpuninter.checked == false && cplivros.checked == false)
+    || (cpudemy.checked == false && cplivros.checked == false))
+    statusint = 1;
+else if ((cpuninter.checked == true && cpudemy.checked == true && cplivros.checked == true)
+    ||(cpuninter.checked == true && cpudemy.checked == true)
+    || (cpuninter.checked == true && cplivros.checked == true)
+    || (cpudemy.checked == true && cplivros.checked == true))
+    statusint = 0;
+
+if (statusint === 1)
+    finalstatus = "Selecione 2 ou 3 para comparar";
+else if (statusint === 0)
+    finalstatus = "Cálculo realizado";
+
+return (restatus.innerHTML = finalstatus);
+}
 
 function calchrs() {
         const q1uninter = document.getElementById("q1uninter");
