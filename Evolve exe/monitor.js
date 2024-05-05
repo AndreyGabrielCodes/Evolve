@@ -4,9 +4,8 @@ const cplivros = document.querySelector("#cplivros");
 
 const operacao = document.querySelector("#operacao");
 const executar = document.querySelector("#executar");
-let resposta = document.querySelector("#resposta");
-
-executar.addEventListener("click", calchrs);
+let reshrs = document.querySelector("#reshrs");
+let resdias = document.querySelector("#resdias");
 
 function calchrs() {
         const q1uninter = document.getElementById("q1uninter");
@@ -15,43 +14,88 @@ function calchrs() {
         const vlq1uninter = parseInt(q1uninter.value);
         const vlq1udemy = parseInt(q1udemy.value);
         const vlq1livros = parseInt(q1livros.value);
-        const selecao = operacao.value;
-        let rescalchrs
-        let textores
-        let nenhumamarc
+        let rescalchrs;
+        let textocalchrs;
     if ((cpuninter.checked == false && cpudemy.checked == false && cplivros.checked == false)
         ||(cpuninter.checked == false && cpudemy.checked == false)
         || (cpuninter.checked == false && cplivros.checked == false)
         || (cpudemy.checked == false && cplivros.checked == false))
-        nenhumamarc = 1;
+        textocalchrs = "Selecione 2 ou 3 para comparar";
     else if ((cpuninter.checked == true && cpudemy.checked == true && cplivros.checked == true)
         ||(cpuninter.checked == true && cpudemy.checked == true)
         || (cpuninter.checked == true && cplivros.checked == true)
         || (cpudemy.checked == true && cplivros.checked == true))
-        nenhumamarc = 0;
+        textocalchrs = " horas totais";
 
+   if (textocalchrs === "Selecione 2 ou 3 para comparar")
+        rescalchrs = "";
 
-    
-    if (nenhumamarc === 1)
-        textores = "";
-    if (nenhumamarc === 0)
-        textores = " horas totais";
-    
-    if (nenhumamarc = 1)
-            rescalchrs = "Selecione 2 ou 3 para comparar"
-        if (selecao === "somar")
-            if (cpuninter.checked == true && cpudemy.checked == true && cplivros.checked == true)
-                rescalchrs = vlq1uninter + vlq1udemy + vlq1livros;
-            else if (cpuninter.checked == true && cpudemy.checked == true)
-                rescalchrs = vlq1uninter + vlq1udemy;
-            else if (cpuninter.checked == true && cplivros.checked == true)
-                rescalchrs = vlq1uninter + vlq1livros;
-            else if (cpudemy.checked == true && cplivros.checked == true)
-                rescalchrs = vlq1udemy + vlq1livros;
-            return (resposta.innerHTML = rescalchrs + textores);      
-        ;
+    if (operacao.value === "somar")
+        if (cpuninter.checked == true && cpudemy.checked == true && cplivros.checked == true)
+            rescalchrs = vlq1uninter + vlq1udemy + vlq1livros;
+        else if (cpuninter.checked == true && cpudemy.checked == true)
+            rescalchrs = vlq1uninter + vlq1udemy;
+        else if (cpuninter.checked == true && cplivros.checked == true)
+            rescalchrs = vlq1uninter + vlq1livros;
+        else if (cpudemy.checked == true && cplivros.checked == true)
+            rescalchrs = vlq1udemy + vlq1livros;
     ;
-        
-    
+    if (operacao.value === "media")
+        if (cpuninter.checked == true && cpudemy.checked == true && cplivros.checked == true)
+            rescalchrs = (vlq1uninter + vlq1udemy + vlq1livros) / 3;
+        else if (cpuninter.checked == true && cpudemy.checked == true)
+            rescalchrs = (vlq1uninter + vlq1udemy) / 2;
+        else if (cpuninter.checked == true && cplivros.checked == true)
+            rescalchrs = (vlq1uninter + vlq1livros) / 2;
+        else if (cpudemy.checked == true && cplivros.checked == true)
+            rescalchrs = (vlq1udemy + vlq1livros) / 2;     
+    ;
+    return (reshrs.innerHTML = rescalchrs + textocalchrs);  
 }
+
+function calcdias() {
+        const q2uninter = document.getElementById("q2uninter");
+        const q2udemy = document.getElementById("q2udemy");
+        const q2livros = document.getElementById("q2livros");
+        const vlq2uninter = parseInt(q2uninter.value);
+        const vlq2udemy = parseInt(q2udemy.value);
+        const vlq2livros = parseInt(q2livros.value);
+        let rescalcdias;
+        let textocalcdias;
+    if ((cpuninter.checked == false && cpudemy.checked == false && cplivros.checked == false)
+        ||(cpuninter.checked == false && cpudemy.checked == false)
+        || (cpuninter.checked == false && cplivros.checked == false)
+        || (cpudemy.checked == false && cplivros.checked == false))
+        textocalcdias = "Selecione 2 ou 3 para comparar";
+    else if ((cpuninter.checked == true && cpudemy.checked == true && cplivros.checked == true)
+        ||(cpuninter.checked == true && cpudemy.checked == true)
+        || (cpuninter.checked == true && cplivros.checked == true)
+        || (cpudemy.checked == true && cplivros.checked == true))
+        textocalcdias = " dias totais";
+
+    if (textocalcdias === "Selecione 2 ou 3 para comparar")
+        rescalcdias = "";
+
+    if (operacao.value === "somar")
+        if (cpuninter.checked == true && cpudemy.checked == true && cplivros.checked == true)
+            rescalcdias = vlq2uninter + vlq2udemy + vlq2livros;
+        else if (cpuninter.checked == true && cpudemy.checked == true)
+            rescalcdias = vlq2uninter + vlq2udemy;
+        else if (cpuninter.checked == true && cplivros.checked == true)
+            rescalcdias = vlq2uninter + vlq2livros;
+        else if (cpudemy.checked == true && cplivros.checked == true)
+            rescalcdias = vlq2udemy + vlq2livros;
+    ;
+    if (operacao.value === "media")
+        if (cpuninter.checked == true && cpudemy.checked == true && cplivros.checked == true)
+            rescalcdias = (vlq2uninter + vlq2udemy + vlq2livros) / 3;
+        else if (cpuninter.checked == true && cpudemy.checked == true)
+            rescalcdias = (vlq2uninter + vlq2udemy) / 2;
+        else if (cpuninter.checked == true && cplivros.checked == true)
+            rescalcdias = (vlq2uninter + vlq2livros) / 2;
+        else if (cpudemy.checked == true && cplivros.checked == true)
+            rescalcdias = (vlq2udemy + vlq2livros) / 2;     
+    ;
+    return (resdias.innerHTML = rescalcdias + textocalcdias);  
+};
 
