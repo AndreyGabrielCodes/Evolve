@@ -1,3 +1,11 @@
+const q1uninter = document.querySelector("#q1uninter");
+const q1udemy = document.querySelector("#q1udemy");
+const q1livros = document.querySelector("#q1livros");
+
+const q2uninter = document.querySelector("#q2uninter");
+const q2udemy = document.querySelector("#q2udemy");
+const q2livros = document.querySelector("#q2livros");
+
 const cpuninter = document.querySelector("#cpuninter");
 const cpudemy = document.querySelector("#cpudemy");
 const cplivros = document.querySelector("#cplivros");
@@ -28,15 +36,40 @@ else if (statusint === 0)
     finalstatus = "Cálculo realizado";
 
 if (statusint === 0)
-    calcdias() && calchrs();
+    valorexiste();
 
 return (restatus.innerHTML = finalstatus);
 }
 
+function valorexiste() {
+    const verq1_1 = parseInt(q1uninter.value);
+    const verq1_2 = parseInt(q1udemy.value);
+    const verq1_3 = parseInt(q1livros.value);
+    const verq2_1 = parseInt(q2uninter.value);
+    const verq2_2 = parseInt(q2udemy.value);
+    const verq2_3 = parseInt(q2livros.value);
+    let valido;
+    let statusinv;
+    if ((verq1_1 >= 1 && verq1_2 >= 1 && verq1_3 >= 1) 
+    || (verq1_1 >= 1 && verq1_2 >= 1)
+    || (verq1_1 >= 1 && verq1_3 >= 1)
+    || (verq1_2 >= 1 && verq1_3 >= 1))
+    valido = 1;
+
+    if ((verq1_1 == 0 && verq1_2 == 0 && verq1_3 == 0) 
+    || (verq1_1 == 0 && verq1_2 == 0)
+    || (verq1_1 == 0 && verq1_3 == 0)
+    || (verq1_2 == 0 && verq1_3 == 0))
+    valido = 0;
+
+if (valido === 1)
+    calcdias() && calchrs()
+    
+if (valido === 0) 
+    restatus.innerHTML = "Favor inserir ao menos um valor"
+}
+
 function calchrs() {
-    const q1uninter = document.getElementById("q1uninter");
-    const q1udemy = document.getElementById("q1udemy");
-    const q1livros = document.getElementById("q1livros");
     const vlq1uninter = parseInt(q1uninter.value);
     const vlq1udemy = parseInt(q1udemy.value);
     const vlq1livros = parseInt(q1livros.value);
@@ -66,9 +99,6 @@ return (reshrs.innerHTML = rescalchrs + " horas totais");
 }
 
 function calcdias() {
-        const q2uninter = document.getElementById("q2uninter");
-        const q2udemy = document.getElementById("q2udemy");
-        const q2livros = document.getElementById("q2livros");
         const vlq2uninter = parseInt(q2uninter.value);
         const vlq2udemy = parseInt(q2udemy.value);
         const vlq2livros = parseInt(q2livros.value);
