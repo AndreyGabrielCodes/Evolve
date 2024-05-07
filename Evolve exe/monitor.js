@@ -16,7 +16,6 @@ let reshrs = document.querySelector("#reshrs");
 let resdias = document.querySelector("#resdias");
 
 function status() {
-    let finalstatus;
     let statusint;
     let restatus = document.querySelector("#restatus");
 if ((cpuninter.checked == false && cpudemy.checked == false && cplivros.checked == false)
@@ -31,42 +30,60 @@ else if ((cpuninter.checked == true && cpudemy.checked == true && cplivros.check
     statusint = 0;
 
 if (statusint === 1)
-    finalstatus = "Selecione 2 ou 3 para comparar";
-else if (statusint === 0)
-    finalstatus = "Cálculo realizado";
-
+    restatus.innerHTML = "Selecione 2 ou 3 para comparar";
 if (statusint === 0)
     valorexiste();
-
-return (restatus.innerHTML = finalstatus);
 }
 
 function valorexiste() {
-    const verq1_1 = parseInt(q1uninter.value);
-    const verq1_2 = parseInt(q1udemy.value);
-    const verq1_3 = parseInt(q1livros.value);
-    const verq2_1 = parseInt(q2uninter.value);
-    const verq2_2 = parseInt(q2udemy.value);
-    const verq2_3 = parseInt(q2livros.value);
-    let valido;
-    let statusinv;
+    const verq1_1 = q1uninter.value;
+    const verq1_2 = q1udemy.value;
+    const verq1_3 = q1livros.value;
+    const verq2_1 = q2uninter.value;
+    const verq2_2 = q2udemy.value;
+    const verq2_3 = q2livros.value;
+    let q1valido;
+    let q2valido;
+    //horas
     if ((verq1_1 >= 1 && verq1_2 >= 1 && verq1_3 >= 1) 
     || (verq1_1 >= 1 && verq1_2 >= 1)
     || (verq1_1 >= 1 && verq1_3 >= 1)
     || (verq1_2 >= 1 && verq1_3 >= 1))
-    valido = 1;
+        q1valido = 1;
+    if ((verq1_1 == '' && verq1_2 == '' && verq1_3 == '') 
+    || (verq1_1 == '' && verq1_2 == '')
+    || (verq1_1 == '' && verq1_3 == '')
+    || (verq1_2 == '' && verq1_3 == ''))
+        q1valido = 0;
 
-    if ((verq1_1 == 0 && verq1_2 == 0 && verq1_3 == 0) 
-    || (verq1_1 == 0 && verq1_2 == 0)
-    || (verq1_1 == 0 && verq1_3 == 0)
-    || (verq1_2 == 0 && verq1_3 == 0))
-    valido = 0;
+    //dias
+    if ((verq2_1 >= 1 && verq2_2 >= 1 && verq2_3 >= 1) 
+    || (verq2_1 >= 1 && verq2_2 >= 1)
+    || (verq2_1 >= 1 && verq2_3 >= 1)
+    || (verq2_2 >= 1 && verq2_3 >= 1))
+        q2valido = 1;
+    if ((verq2_1 == '' && verq2_2 == '' && verq2_3 == '') 
+    || (verq2_1 == '' && verq2_2 == '')
+    || (verq2_1 == '' && verq2_3 == '')
+    || (verq2_2 == '' && verq2_3 == ''))
+        q2valido = 0;
 
-if (valido === 1)
-    calcdias() && calchrs()
-    
-if (valido === 0) 
-    restatus.innerHTML = "Favor inserir ao menos um valor"
+if (q1valido === 1)
+        calchrs();
+    else if (q1valido === 0)
+        reshrs.innerHTML = "";
+;
+if (q2valido === 1)
+        calcdias()
+    else if (q2valido === 0)
+        resdias.innerHTML = "";    
+;
+
+if (q1valido === 1 || q2valido === 1)
+        restatus.innerHTML = "Valores gerados"
+    else if (q1valido === 0 && q2valido === 0) 
+        restatus.innerHTML = "Insira valores em horas e/ou dias";
+;
 }
 
 function calchrs() {
