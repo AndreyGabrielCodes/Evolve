@@ -10,7 +10,7 @@ const cpuninter = document.querySelector("#cpuninter");
 const cpudemy = document.querySelector("#cpudemy");
 const cplivros = document.querySelector("#cplivros");
 
-const operacao = document.querySelector("#operacao");
+const operacao = document.querySelector("#seloperacao");
 const executar = document.querySelector("#executar");
 let reshrs = document.querySelector("#reshrs");
 let resdias = document.querySelector("#resdias");
@@ -31,6 +31,10 @@ else if ((cpuninter.checked == true && cpudemy.checked == true && cplivros.check
 
 if (statusint === 1)
     restatus.innerHTML = "Selecione 2 ou 3 para comparar";
+if (statusint === 1)
+    resdias.innerHTML = "";
+if (statusint === 1)
+    reshrs.innerHTML = "";
 if (statusint === 0)
     valorexiste();
 }
