@@ -18,30 +18,24 @@
         <span class="comparar"><input id="cpuninter" type="checkbox"> Comparar</span>
             <DIV class="bloco">
                 <H2>Uninter</H2>
-                <ul>
-                    <div class="subcaixas"><li>Horas: <input id="q1uninter" type="number"></li></div>
-                    <div class="subcaixas"><li>Dias: <input id="q2uninter"type="number"></li></div>
-                </ul>
+                    <div class="subcaixasmat"><li>Horas: <input id="q1uninter" class="chk" type="number"></li></div>
+                    <div class="subcaixasmat"><li>Dias: <input id="q2uninter" class="chk" type="number"></li></div>
             </DIV>
         </div>
         <div id="bludemy">
             <span class="comparar"><input id="cpudemy" type="checkbox"> Comparar</span>
             <DIV  class="bloco">
                 <H2>Udemy</H2>
-                <ul>
-                    <div class="subcaixas"><li>Horas: <input id="q1udemy" type="number"></li></div>
-                    <div class="subcaixas"><li>Dias: <input id="q2udemy" type="number"></li></div>
-                </ul>
+                    <div class="subcaixasmat"><li>Horas: <input id="q1udemy" class="chk" type="number"></li></div>
+                    <div class="subcaixasmat"><li>Dias: <input id="q2udemy" class="chk" type="number"></li></div>
             </DIV>
         </div>
         <div id="bllivros">
             <span class="comparar"><input id="cplivros" type="checkbox"> Comparar</span>
             <DIV  class="bloco">
                 <H2>Livros</H2>
-                <ul>
-                    <div class="subcaixas"><li>Horas: <input id="q1livros" type="number"></li></div>
-                    <div class="subcaixas"><li>Dias: <input id="q2livros" type="number"></li></div>
-                </ul>
+                    <div class="subcaixasmat"><li>Horas: <input id="q1livros" class="chk" type="number"></li></div>
+                    <div class="subcaixasmat"><li>Dias: <input id="q2livros" class="chk" type="number"></li></div>
             </DIV>
         </div>
 
@@ -50,8 +44,8 @@
             <DIV>
                 <H2>Comparar valores</H2>
                 <Div id="operacao">
-                        <div class="subcaixas">
-                           Operação: <select id="seloperacao">
+                        <div class="subcaixascompar">
+                           <li>Operação:<select id="seloperacao"></li>
                                 <option>somar</option>
                                 <option>media</option>
                             </select>
@@ -59,15 +53,13 @@
                         </div>
                 </Div>
                 <Div id="reestatus">
-                    <div class="subcaixas">
-                       Status:
-                       <span id="restatus"></span>
-                        </div>
+                    <div class="subcaixascompar">
+                    <li>Status: <span id="restatus"></span></li>
                      </Div>
                 </DIV>
                 <Div id="resultado"> <!--renomear como resposta e aplicar css depois-->
-                    <div class="subcaixas">
-                        Resultado: 
+                    <div class="subcaixascompar">
+                        <li>Resultado:</li>
                         <span id="reshrs"></span>
                         <span id="resdias"></span>
                     </div>
