@@ -1,49 +1,54 @@
 body {
-    background-color: grey;
-    margin:50px;
+    background-color: rgb(41, 39, 75);
+    margin:5px 50px 10px;
+    font-family: 'Segoe UI', sans-serif ;
 }
 
 h1{
-    color:rgb(6, 237, 253);
+    color:white;
     font-size: 70px;
 }
 
 h2{
-    color:black;
+    color:white;
 }
 
 .bloco{
     width: fit-content;
-    padding-left: 10px;
+    padding: 10px;
+    padding-top: 0px;
     margin:5px;
     height: fit-content;
-    border: 5px solid rgb(6, 237, 253);
-    background-color: rgb(6, 237, 253);
+    border: 5px solid rgb(181, 39, 105);
+    background-color: rgb(181, 39, 105);
     border-radius:20px;
 }
 
 .bloco:hover{
-        box-shadow: 5px 5px black;
+        box-shadow: 5px 5px rgb(224, 84, 173);
 }
 
 .subcaixasmat{
     border: 2px solid white;
     background-color: white;
-    padding:3px;
+    padding:4px;
     margin:3px;
-    width: 130px;
+    width: fit-content;
     height: 20px;
     border-radius: 10px;
+    align-content: center;
+    text-align: left;
 }
 
 .subcaixascompar{
     border: 2px solid white;
     background-color: white;
-    padding:3px;
+    padding:4px;
     margin:3px;
     width: fit-content;
     height: fit-content;
     border-radius: 10px;
+    align-content: center;
 }
 
 .subcaixasmat:hover{
@@ -57,8 +62,11 @@ h2{
     width: fit-content;
 }
 
-.chk{
+.campo{
     width: 50px;
+    border:none;
+    border-bottom:solid rgb(41, 39, 75);
+    box-sizing: border-box;
 }
 
 .comparar{
