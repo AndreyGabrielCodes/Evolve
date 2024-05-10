@@ -41,30 +41,36 @@
 
 
         <div class="bloco">
-            <DIV>
                 <H2>Comparar valores</H2>
-                <Div id="operacao">
-                        <div class="subcaixascompar">
-                           <li>Operação:<select id="seloperacao"></li>
-                                <option>somar</option>
-                                <option>media</option>
-                            </select>
-                            <button id="executar" onclick="status()">Obter Resultado</button>
-                        </div>
+
+                <Div id="operacao" class="subcaixascompar">
+                    <li>Operação: 
+                        <select id="seloperacao">
+                            <option>somar</option>
+                            <option>media</option>
+                        </select>
+                        <br>
+                            
+                    </li>
                 </Div>
-                <Div id="reestatus">
-                    <div class="subcaixascompar">
-                    <li>Status: <span id="restatus"></span></li>
-                     </Div>
+                <div id="obterres" class="subcaixascompar">
+                    <li>
+                        <button id="executar" onclick="status()">Obter Resultado</button>
+                    </li>
+                </div>
+
+                <Div id="status" class="subcaixascompar">
+                    <li>Status: 
+                        <span id="restatus"></span>
+                    </li>
                 </DIV>
-                <Div id="resultado"> <!--renomear como resposta e aplicar css depois-->
-                    <div class="subcaixascompar">
-                        <li>Resultado:</li>
+
+                <Div id="resultado" class="subcaixascompar">
+                    <li>Resultado:
                         <span id="reshrs"></span>
                         <span id="resdias"></span>
-                    </div>
+                    </li>
                 </Div>
-            </DIV>
         </div>
 
 
