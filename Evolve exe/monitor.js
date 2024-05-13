@@ -15,6 +15,9 @@ const executar = document.querySelector("#executar");
 let reshrs = document.querySelector("#reshrs");
 let resdias = document.querySelector("#resdias");
 
+let divstatus = document.querySelector("#status");
+divstatus.style.display = "none";
+
 function status() {
     let statusint;
     let restatus = document.querySelector("#restatus");
@@ -35,6 +38,8 @@ if (statusint === 1)
     resdias.innerHTML = "";
 if (statusint === 1)
     reshrs.innerHTML = "";
+if (statusint === 1)
+    divstatus.style.display = 'block';
 if (statusint === 0)
     valorexiste();
 }
@@ -73,21 +78,30 @@ function valorexiste() {
         q2valido = 0;
 
 if (q1valido === 1)
-        calchrs();
+        calchrs()
     else if (q1valido === 0)
         reshrs.innerHTML = "";
 ;
+
+if (q1valido === 1)
+    divstatus.style.display = "none"
+; 
+
+if (q2valido === 1)
+    divstatus.style.display = "none"
+; 
+
 if (q2valido === 1)
         calcdias()
     else if (q2valido === 0)
         resdias.innerHTML = "";    
 ;
 
-if (q1valido === 1 || q2valido === 1)
-        restatus.innerHTML = "Valores gerados"
-    else if (q1valido === 0 && q2valido === 0) 
-        restatus.innerHTML = "Insira valores em horas e/ou dias";
-;
+
+if (q1valido === 0 && q2valido === 0) 
+    div.style.display = 'block';
+if (q1valido === 0 && q2valido === 0) 
+    restatus.innerHTML = "Insira valores em horas e/ou dias";
 }
 
 function calchrs() {
@@ -120,10 +134,10 @@ return (reshrs.innerHTML = rescalchrs + " horas totais");
 }
 
 function calcdias() {
-        const vlq2uninter = parseInt(q2uninter.value);
-        const vlq2udemy = parseInt(q2udemy.value);
-        const vlq2livros = parseInt(q2livros.value);
-        let rescalcdias;
+    const vlq2uninter = parseInt(q2uninter.value);
+    const vlq2udemy = parseInt(q2udemy.value);
+    const vlq2livros = parseInt(q2livros.value);
+    let rescalcdias;
 
     if (operacao.value === "somar")
         if (cpuninter.checked == true && cpudemy.checked == true && cplivros.checked == true)
