@@ -39,7 +39,7 @@ else if ((cpuninter.checked == true && cpudemy.checked == true && cplivros.check
     statusint = 0;
 
 if (statusint === 1)
-    restatus.innerHTML = "Selecione 2 ou 3 para comparar";
+    restatus.innerHTML = "Selecione 2 ou 3 para comparar!";
 if (statusint === 1)
     resdias.innerHTML = "";
 if (statusint === 1)
@@ -64,10 +64,10 @@ function valorexiste() {
     let q1valido;
     let q2valido;
     //horas
-    if ((verq1_1 >= 1 && verq1_2 >= 1 && verq1_3 >= 1) 
-    || (verq1_1 >= 1 && verq1_2 >= 1)
-    || (verq1_1 >= 1 && verq1_3 >= 1)
-    || (verq1_2 >= 1 && verq1_3 >= 1))
+    if ((verq1_1 >= 0 && verq1_2 >= 0 && verq1_3 >= 0) 
+    || (verq1_1 >= 0 && verq1_2 >= 0)
+    || (verq1_1 >= 0 && verq1_3 >= 0)
+    || (verq1_2 >= 0 && verq1_3 >= 0))
         q1valido = 1;
     if ((verq1_1 == '' && verq1_2 == '' && verq1_3 == '') 
     || (verq1_1 == '' && verq1_2 == '')
@@ -76,11 +76,11 @@ function valorexiste() {
         q1valido = 0;
 
     //dias
-    if ((verq2_1 >= 1 && verq2_2 >= 1 && verq2_3 >= 1) 
-    || (verq2_1 >= 1 && verq2_2 >= 1)
-    || (verq2_1 >= 1 && verq2_3 >= 1)
-    || (verq2_2 >= 1 && verq2_3 >= 1))
-        q2valido = 1;
+    if ((verq2_1 >= 0 && verq2_2 >= 0 && verq2_3 >= 0) 
+    || (verq2_1 >= 0 && verq2_2 >= 0)
+    || (verq2_1 >= 0 && verq2_3 >= 0)
+    || (verq2_2 >= 0 && verq2_3 >= 0))
+        q2valido = 0;
     if ((verq2_1 == '' && verq2_2 == '' && verq2_3 == '') 
     || (verq2_1 == '' && verq2_2 == '')
     || (verq2_1 == '' && verq2_3 == '')
@@ -100,19 +100,26 @@ else if (q2valido === 0)
 ;
 
 if (q1valido === 0 && q2valido === 0) 
-    restatus.innerHTML = "Insira valores em horas e/ou dias";
+    restatus.innerHTML = "Insira valores em horas e/ou dias!";
 if (q1valido === 0 && q2valido === 0) 
     divstatus.style.display = 'block';
 
-if (q1valido === 1 || q2valido === 1)
+if (q1valido === 0) 
+    divresulhrs.style.display = 'none';
+
+if (q2valido === 0) 
+    divresuldias.style.display = 'none';
+
+if (q1valido === 1)
     divresulhrs.style.display = "block"
 ; 
-if (q1valido === 1 || q2valido === 1)
+if (q2valido === 1)
     divresuldias.style.display = "block"
 ; 
 if (q1valido === 1 || q2valido === 1)
     divstatus.style.display = "none"
 ; 
+
 }
 
 function calchrs() {
@@ -172,3 +179,4 @@ function calcdias() {
     ;
     return (resdias.innerHTML = rescalcdias + " dias ao todo");  
 };
+
