@@ -82,3 +82,7 @@ h2{
 #operacao, #obterres{
     display: inline-block;
 }
+
+#resultadohrs, #resultadodias{
+    display: inline-block;
+}
