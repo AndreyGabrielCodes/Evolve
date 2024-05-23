@@ -9,68 +9,66 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="monitor.css">
         <link rel="icon" type="./favicon.png" href="iconesite.png"
-
     </head>
     <body> 
-        <h1>Evolve</h1>
-        <h2>Calculador de matérias</h2>
-    <div id="blocomaterias">
-        <div id="bluninter">
-        <span class="comparar"><input id="cpuninter" type="checkbox"> Comparar</span>
-            <DIV class="bloco">
-                <H2>Uninter</H2>
-                    <div class="subcaixasmat">Horas: <input id="q1uninter" class="campo" type="number"></div>
-                    <div class="subcaixasmat">Dias: <input id="q2uninter" class="campo" type="number"></div>
-            </DIV>
+            <h1>Evolve</h1>
+            <h2>Calculador de matérias</h2>
+        <div id="blocomaterias">
+            <div id="bluninter">
+            <span class="selecionar"><input id="cpuninter" type="checkbox"> Selecionar</span>
+                <DIV class="bloco">
+                    <H2>Uninter</H2>
+                        <div class="subcaixasmat">Horas: <input id="q1uninter" class="campo" type="number"></div>
+                        <div class="subcaixasmat">Dias: <input id="q2uninter" class="campo" type="number"></div>
+                </DIV>
+            </div>
+            <div id="bludemy">
+                <span class="selecionar"><input id="cpudemy" type="checkbox"> Selecionar</span>
+                <DIV  class="bloco">
+                    <H2>Udemy</H2>
+                        <div class="subcaixasmat">Horas: <input id="q1udemy" class="campo" type="number"></div>
+                        <div class="subcaixasmat">Dias: <input id="q2udemy" class="campo" type="number"></div>
+                </DIV>
+            </div>
+            <div id="bllivros">
+                <span class="selecionar"><input id="cplivros" type="checkbox"> Selecionar</span>
+                <DIV  class="bloco">
+                    <H2>Livros</H2>
+                        <div class="subcaixasmat">Horas: <input id="q1livros" class="campo" type="number"></div>
+                        <div class="subcaixasmat">Dias: <input id="q2livros" class="campo" type="number"></div>
+                </DIV>
+            </div>
         </div>
-        <div id="bludemy">
-            <span class="comparar"><input id="cpudemy" type="checkbox"> Comparar</span>
-            <DIV  class="bloco">
-                <H2>Udemy</H2>
-                    <div class="subcaixasmat">Horas: <input id="q1udemy" class="campo" type="number"></div>
-                    <div class="subcaixasmat">Dias: <input id="q2udemy" class="campo" type="number"></div>
-            </DIV>
-        </div>
-        <div id="bllivros">
-            <span class="comparar"><input id="cplivros" type="checkbox"> Comparar</span>
-            <DIV  class="bloco">
-                <H2>Livros</H2>
-                    <div class="subcaixasmat">Horas: <input id="q1livros" class="campo" type="number"></div>
-                    <div class="subcaixasmat">Dias: <input id="q2livros" class="campo" type="number"></div>
-            </DIV>
-        </div>
-    </div>
-    <div id="blocorespostas">
-        <div class="bloco">
-            <H2>Calcular valores</H2>
-            <Div id="operacao" class="subcaixascompar">
-                Operação: 
+        <div id="blocorespostas">
+            <div class="bloco">
+                <H2>Calcular valores</H2>
+                <Div id="operacao" class="subcaixascompar">
+                    Operação: 
                     <select id="seloperacao">
                         <option>Somar</option>
                         <option>Media</option>
                     </select>
-            </Div>
-                <div id="obterres" class="subcaixascompar">
-                        <button id="executar" onclick="status()">Obter Resultado</button>
-                </div>
-                <Div id="status" class="subcaixascompar">
-                    <span id="restatus"></span>
-                </DIV>
-                <div id="resultados">
-                    <Div id="resultadohrs" class="subcaixascompar">
-                        <span id="reshrs"></span>
-                    </Div>
-                    <Div id="resultadodias" class="subcaixascompar">
-                        <span id="resdias"></span>
-                    </Div>
-                </div>
+                </Div>
+                    <div id="obterres" class="subcaixascompar">
+                            <button id="executar" onclick="status()">Obter Resultado</button>
+                    </div>
+                    <Div id="status" class="subcaixascompar">
+                        <span id="restatus"></span>
+                    </DIV>
+                    <div id="resultados">
+                        <Div id="resultadohrs" class="subcaixascompar">
+                            <span id="reshrs"></span>
+                        </Div>
+                        <Div id="resultadodias" class="subcaixascompar">
+                            <span id="resdias"></span>
+                        </Div>
+                    </div>
+            </div>
         </div>
-    </div>
-        <footer>
-            <img src="logogit.png" id="iconelinks"> <a href="https://github.com/AndreyGabrielCodes" target="_blank">GitHub</a>
-            <img src="logolinkedin.png" id="iconelinks"> <a href="https://www.linkedin.com/in/andreygabriel" target="_blank">Linkedin</a>
-            <br>*rodapé em processo de construção 
-        </footer>
+            <footer>
+                <a href="https://github.com/AndreyGabrielCodes" target="_blank"><img src="logogit.png" id="iconelinks"> GitHub</a>
+                <a href="https://www.linkedin.com/in/andreygabriel" target="_blank"><img src="logolinkedin.png" id="iconelinks"> Linkedin</a>
+            </footer>
         <script src="monitor.js"></script>
     </body>
 </html>

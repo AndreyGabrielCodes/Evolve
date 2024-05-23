@@ -5,8 +5,10 @@ body {
 
 h1{
     color:white;
-    font-size: 70px;
+    font-size: 80px;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 h2{
@@ -19,14 +21,16 @@ a:link, a:visited{
    text-decoration: none;
 }
 
-/*footer{
+footer{
+    height: fit-content ;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    justify-content: baseline;
+    bottom: 0;
+    position: fixed;
     background-color: white;
-    height: 50px;
-    margin-bottom: 0 auto;
-}*/
-
-#iconelinks{
-    width:20px;
+    
 }
 
 .bloco{
@@ -42,7 +46,7 @@ a:link, a:visited{
 
 .bloco:hover{
     transition: 0.5s ease-in-out;
-    box-shadow: 5px 5px rgb(224, 84, 173);
+    box-shadow: 5px 5px white;
 }
 
 .subcaixasmat{
@@ -86,7 +90,7 @@ a:link, a:visited{
     box-sizing: border-box;
 }
 
-.comparar{
+.selecionar{
     color:white;
     font-size: large;
     font-size: 125%;
@@ -122,4 +126,8 @@ a:link, a:visited{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#iconelinks{
+    width:20px;
 }
