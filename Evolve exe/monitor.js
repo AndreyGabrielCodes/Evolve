@@ -193,4 +193,3 @@ function calcdias() {
     ;
     return (resdias.innerHTML = rescalcdias + " dias ao todo");  
 }
-

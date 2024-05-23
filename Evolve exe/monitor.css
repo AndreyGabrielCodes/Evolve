@@ -18,6 +18,7 @@ h2{
 
 a:link, a:visited{
    font-weight: bold;
+   color: black;
    text-decoration: none;
 }
 
