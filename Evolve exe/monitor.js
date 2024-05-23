@@ -41,7 +41,7 @@ function status() {
         statusint = 0;}
     //altera o resultado dos sobblocos status, dias e horas
     if (statusint === 1)
-        restatus.innerHTML = "Selecione 2 ou 3 para comparar!";
+        restatus.innerHTML = "Selecione 2 ou 3 matérias para calcular!";
     if (statusint === 1)
         resdias.innerHTML = "";
     if (statusint === 1)
@@ -68,29 +68,38 @@ function valorexiste() {
     const verq2_3 = q2livros.value;
     let q1valido;
     let q2valido;
-    //valido preenchimento das questões das horas
-    if ((verq1_1 == '' && verq1_2 == '' && verq1_3 == '') 
-        || (verq1_1 == '' && verq1_2 == '')
-        || (verq1_1 == '' && verq1_3 == '')
-        || (verq1_2 == '' && verq1_3 == ''))
-        {q1valido = 0;}
-    else {
-        q1valido = 1;
+    //valida preenchimento das questões das horas nas matérias selecionadas
+    if (cpuninter.checked == true && verq1_1 == ''){
+        q1valido = 0;
     }
-    //valido preenchimento das questões dos dias
-    if ((verq2_1 == '' && verq2_2 == '' && verq2_3 == '') 
-        || (verq2_1 == '' && verq2_2 == '')
-        || (verq2_1 == '' && verq2_3 == '')
-        || (verq2_2 == '' && verq2_3 == ''))
-        {q2valido = 0;}
-    else {
-        q2valido = 1;
+        else if (cpudemy.checked == true && verq1_2 == ''){
+        q1valido = 0;
+        }
+        else if (cplivros.checked == true && verq1_3 == ''){
+            q1valido = 0;
+        }
+        else {
+            q1valido = 1;
+        }
+    //valida preenchimento das questões dos dias nas matérias selecionadas
+    if (cpuninter.checked == true && verq2_1 == ''){
+        q2valido = 0;
     }
+        else if (cpudemy.checked == true && verq2_2 == ''){
+        q2valido = 0;
+        }
+        else if (cplivros.checked == true && verq2_3 == ''){
+            q2valido = 0;
+        }
+        else {
+            q2valido = 1;
+        }
     //executa a function das horas
     if (q1valido === 1)
             calchrs();
         else {
-            reshrs.innerHTML = "";}
+            reshrs.innerHTML = "";
+        }
     //executa a function dos dias
     if (q2valido === 1)
         calcdias();
@@ -98,7 +107,7 @@ function valorexiste() {
             resdias.innerHTML = "";}   
     //altera texto do status
     if (q1valido === 0 && q2valido === 0) 
-        {restatus.innerHTML = "Insira valores em horas e/ou dias!"}
+        {restatus.innerHTML = "Insira valores em horas e/ou dias nas matérias selecionadas!"}
     ;
     //altera exibição do subbloco do status
     if (q1valido === 0 && q2valido === 0) 
@@ -109,8 +118,8 @@ function valorexiste() {
         }
     //altera a exibição do subbloco do resultado de horas
     if (q1valido === 0) 
-        {divresulhrs.style.display = "none";}
-    
+        {divresulhrs.style.display = "none";
+    }
         else {
             divresulhrs.style.display = "block";
         }

@@ -79,6 +79,8 @@ h2{
 #status{
     color: red;
     font-weight: bold;
+    width: 275px;
+    text-align: center;
 }
 
 #bluninter,#bludemy,#bllivros{
