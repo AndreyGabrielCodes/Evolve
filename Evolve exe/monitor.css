@@ -1,6 +1,6 @@
 body {
     background-color: rgb(41, 39, 75);
-    font-family: 'Segoe UI', sans-serif ;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 h1{
@@ -26,11 +26,9 @@ footer{
     width: 100%;
     padding: 10px;
     text-align: center;
-    justify-content: baseline;
     bottom: 0;
     position: fixed;
     background-color: white;
-    
 }
 
 .bloco{
@@ -92,7 +90,6 @@ footer{
 
 .selecionar{
     color:white;
-    font-size: large;
     font-size: 125%;
 }
 
@@ -103,10 +100,6 @@ footer{
     text-align: center;
 }
 
-#bluninter,#bludemy,#bllivros{
-    display: inline-block;
-}
-
 #operacao, #obterres{
     display: inline-block;
 }
@@ -114,12 +107,12 @@ footer{
 #resultados{
     display: flex;
     justify-items: center;
+    align-content: center;
 }
 
 #blocomaterias{
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 #blocorespostas{
