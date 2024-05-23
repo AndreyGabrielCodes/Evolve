@@ -12,7 +12,7 @@
     </head>
     <body> 
         <h1>Evolve</h1>
-        <h2>Monitor de matérias</h2>
+        <h2>Calculador de matérias</h2>
 
         <div id="bluninter">
         <span class="comparar"><input id="cpuninter" type="checkbox"> Comparar</span>
@@ -45,8 +45,8 @@
                 <Div id="operacao" class="subcaixascompar">
                     Operação: 
                         <select id="seloperacao">
-                            <option>somar</option>
-                            <option>media</option>
+                            <option>Somar</option>
+                            <option>Media</option>
                         </select>
                 </Div>
 
@@ -54,10 +54,11 @@
                         <button id="executar" onclick="status()">Obter Resultado</button>
                 </div>
 
-                <Div id="status" class="subcaixascompar" id="campocompar">
+                <Div id="status" class="subcaixascompar">
                     <span id="restatus"></span>
                 </DIV>
-                <span>
+
+            <div id="resultados">
                 <Div id="resultadohrs" class="subcaixascompar">
                     <span id="reshrs"></span>
                 </Div>
@@ -65,9 +66,8 @@
                 <Div id="resultadodias" class="subcaixascompar">
                     <span id="resdias"></span>
                 </Div>
-            </span>
+            </div>
         </div>
-
 
         <script src="monitor.js"></script>
     </body>
