@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title> Learn in order to Evolve</title>
+        <title> Evolve</title>
         <meta name="author" content="Andrey Gabriel de Andrade Moraes">
         <meta name="descricao" content="pagina inicial"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="monitor.css">
+        <link rel="icon" type="./favicon.png" href="iconesite.png"
 
     </head>
     <body> 
         <h1>Evolve</h1>
         <h2>Calculador de matérias</h2>
-
+    <div id="blocomaterias">
         <div id="bluninter">
         <span class="comparar"><input id="cpuninter" type="checkbox"> Comparar</span>
             <DIV class="bloco">
@@ -38,37 +39,33 @@
                     <div class="subcaixasmat">Dias: <input id="q2livros" class="campo" type="number"></div>
             </DIV>
         </div>
-
+    </div>
+    <div id="blocorespostas">
         <div class="bloco">
-                <H2>Calcular valores</H2>
-
-                <Div id="operacao" class="subcaixascompar">
-                    Operação: 
-                        <select id="seloperacao">
-                            <option>Somar</option>
-                            <option>Media</option>
-                        </select>
-                </Div>
-
+            <H2>Calcular valores</H2>
+            <Div id="operacao" class="subcaixascompar">
+                Operação: 
+                    <select id="seloperacao">
+                        <option>Somar</option>
+                        <option>Media</option>
+                    </select>
+            </Div>
                 <div id="obterres" class="subcaixascompar">
                         <button id="executar" onclick="status()">Obter Resultado</button>
                 </div>
-
                 <Div id="status" class="subcaixascompar">
                     <span id="restatus"></span>
                 </DIV>
-
-            <div id="resultados">
-                <Div id="resultadohrs" class="subcaixascompar">
-                    <span id="reshrs"></span>
-                </Div>
-
-                <Div id="resultadodias" class="subcaixascompar">
-                    <span id="resdias"></span>
-                </Div>
-            </div>
+                <div id="resultados">
+                    <Div id="resultadohrs" class="subcaixascompar">
+                        <span id="reshrs"></span>
+                    </Div>
+                    <Div id="resultadodias" class="subcaixascompar">
+                        <span id="resdias"></span>
+                    </Div>
+                </div>
         </div>
-
+    </div>
         <script src="monitor.js"></script>
     </body>
 </html>
