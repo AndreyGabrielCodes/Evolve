@@ -102,18 +102,20 @@ footer{
 #status{
     color: red;
     font-weight: bold;
-    width: 275px;
+    width: 200px;
     text-align: center;
 }
 
-#operacao, #obterres{
-    display: inline-block;
+#operacao{
+    width: fit-content;
 }
 
 #resultados{
-    display: flex;
-    justify-items: center;
-    align-content: center;
+    display:grid;
+    gap: 3px;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    justify-content: center;
 }
 
 #blocomaterias{
