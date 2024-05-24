@@ -14,6 +14,7 @@ h1{
 h2{
     color:white;
     text-align: center;
+    font-style: italic;
 }
 
 a:link, a:visited{
@@ -23,18 +24,19 @@ a:link, a:visited{
 }
 
 footer{
-    height: fit-content ;
+    height: fit-content;
     width: 100%;
     padding: 10px;
     text-align: center;
     bottom: 0;
+    left: 0;
     position: fixed;
     background-color: white;
 }
 
 .bloco{
     width: fit-content;
-    padding: 10px;
+    padding: 5px;
     padding-top: 0px;
     margin:5px;
     height: fit-content;
@@ -62,7 +64,7 @@ footer{
     height: 20px;
     border-radius: 10px;
     align-content: center;
-    text-align: left;
+    text-align:center;
 }
 
 .subcaixasmat:hover{
@@ -131,4 +133,16 @@ footer{
 
 #iconelinks{
     width:20px;
+}
+
+#versao{
+    color:white;
+    font-weight: bold;
+    font-style: italic;
+    bottom: 0;
+    position: fixed;
+}
+
+#rodape{
+    align-items: center;
 }
