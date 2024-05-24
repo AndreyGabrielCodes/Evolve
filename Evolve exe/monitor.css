@@ -44,8 +44,13 @@ footer{
 }
 
 .bloco:hover{
-    transition: 0.5s ease-in-out;
+    transition: 0.5s ease-out;
     box-shadow: 5px 5px white;
+}
+
+.bloco:not(:hover){
+    transition: 0.5s ease-out;
+    box-shadow: none;
 }
 
 .subcaixasmat{
