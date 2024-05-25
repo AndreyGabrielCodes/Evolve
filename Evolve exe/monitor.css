@@ -60,11 +60,12 @@ footer{
     background-color: white;
     padding:4px;
     margin:3px;
-    width: fit-content;
+    width: 105px;
     height: 20px;
+    font-weight: bold;
     border-radius: 10px;
     align-content: center;
-    text-align:center;
+    text-align:right;
 }
 
 .subcaixasmat:hover{
@@ -72,7 +73,7 @@ footer{
     border: 2px solid  rgb(230, 227, 227);
 }
 
-.subcaixascompar{
+.subcaixascal{
     border: 2px solid white;
     background-color: white;
     padding:4px;
@@ -84,7 +85,7 @@ footer{
     align-content: center;
 }
 
-.subcaixascompar:hover{
+.subcaixascal:hover{
     background-color: rgb(230, 227, 227);
     border: 2px solid  rgb(230, 227, 227);
 }
@@ -108,10 +109,6 @@ footer{
     text-align: center;
 }
 
-#operacao{
-    width: fit-content;
-}
-
 #resultados{
     display:grid;
     gap: 3px;
@@ -120,15 +117,21 @@ footer{
     justify-content: center;
 }
 
+#oper_status{
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center; 
+}
+
 #blocomaterias{
     display: flex;
     justify-content: center;
 }
 
-#blocorespostas{
+#blococalculo{
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 #iconelinks{
@@ -141,8 +144,4 @@ footer{
     font-style: italic;
     bottom: 0;
     position: fixed;
-}
-
-#rodape{
-    align-items: center;
 }

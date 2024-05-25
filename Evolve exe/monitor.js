@@ -13,8 +13,6 @@ const cplivros = document.querySelector("#cplivros");
 
 //seleção entre soma e média
 const operacao = document.querySelector("#seloperacao");
-//execução do calculo
-const executar = document.querySelector("#executar");
 //retorno do calculo
 let reshrs = document.querySelector("#reshrs");
 let resdias = document.querySelector("#resdias");

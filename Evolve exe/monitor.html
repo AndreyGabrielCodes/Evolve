@@ -11,8 +11,8 @@
         <link rel="icon" type="./favicon.png" href="imagens/iconesite.png"
     </head>
     <body> 
-            <h1>Evolve</h1>
-            <h2>Calculador de matérias</h2>
+        <h1>Evolve</h1>
+        <h2>Calculador de matérias</h2>
         <div id="blocomaterias">
             <div id="bluninter">
             <span class="selecionar"><input id="cpuninter" type="checkbox"> Selecionar</span>
@@ -39,27 +39,29 @@
                 </DIV>
             </div>
         </div>
-        <div id="blocorespostas">
+        <div id="blococalculo">
             <div class="bloco">
                 <H2>Calcular valores</H2>
-                <Div id="operacao" class="subcaixascompar">
-                    <select id="seloperacao">
-                        <option>Somar</option>
-                        <option>Media</option>
-                    </select>
-                    <button id="executar" onclick="status()">Obter Resultado</button>
-                </Div>
-                    <Div id="status" class="subcaixascompar">
+                <div id="oper_status">
+                    <span class="subcaixascal">
+                        Executar: <select id="seloperacao" onchange="status()">
+                            <option> </option>
+                            <option>Somar</option>
+                            <option>Media</option>
+                        </select>
+                    </span>
+                    <Div id="status" class="subcaixascal">
                         <span id="restatus"></span>
                     </DIV>
-                    <div id="resultados">
-                        <Div id="resultadohrs" class="subcaixascompar">
-                            <span id="reshrs"></span>
-                        </Div>
-                        <Div id="resultadodias" class="subcaixascompar">
-                            <span id="resdias"></span>
-                        </Div>
-                    </div>
+                </div>
+                <div id="resultados">
+                    <Div id="resultadohrs" class="subcaixascal">
+                        <span id="reshrs"></span>
+                    </Div>
+                    <Div id="resultadodias" class="subcaixascal">
+                        <span id="resdias"></span>
+                    </Div>
+                </div>
             </div>
         </div>
         
@@ -69,7 +71,7 @@
                     <a href="https://www.linkedin.com/in/andreygabriel" target="_blank"><img src="imagens/logolinkedin.png" id="iconelinks"> Linkedin</a>
                     <a href="https://github.com/AndreyGabrielCodes/Evolve/commits/main/" target="_blank">
                         <div class="bloco" id="versao">
-                            V39.05-24
+                            V41.05-24
                         </div>
                     </a>
                 </div>
