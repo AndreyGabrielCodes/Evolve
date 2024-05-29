@@ -26,8 +26,9 @@ a:link, a:visited{
 footer{
     height: fit-content;
     width: 100%;
-    padding: 10px;
+    border: 10px solid white;
     text-align: center;
+    padding: 1px;
     bottom: 0;
     left: 0;
     position: fixed;
@@ -103,6 +104,10 @@ footer{
     font-size: 125%;
 }
 
+.iconelinks{
+    width:20px;
+}
+
 #status{
     color: red;
     font-weight: bold;
@@ -140,14 +145,15 @@ footer{
     justify-content: center;
 }
 
-#iconelinks{
-    width:20px;
-}
-
 #versao{
     color:white;
-    font-weight: bold;
     font-style: italic;
-    bottom: 0;
     position: fixed;
+    bottom: 5px;
+    padding: 2px;
+    width: fit-content;
+    height: fit-content;
+    border: 5px solid rgb(181, 39, 105);
+    background-color: rgb(181, 39, 105);
+    border-radius:20px;
 }
