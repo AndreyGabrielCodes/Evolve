@@ -83,6 +83,7 @@ footer{
     height: fit-content;
     border-radius: 10px;
     align-content: center;
+    font-weight: bold;
 }
 
 .subcaixascal:hover{
@@ -107,14 +108,19 @@ footer{
     font-weight: bold;
     width: 200px;
     text-align: center;
+    margin-top: 0;
 }
 
 #resultados{
     display:grid;
-    gap: 3px;
     grid-template-columns: auto auto auto auto;
     align-items: center;
     justify-content: center;
+}
+
+#resultadohrs, #resultadodias{
+    margin-top: 0;
+    margin-left: 0;
 }
 
 #oper_status{
