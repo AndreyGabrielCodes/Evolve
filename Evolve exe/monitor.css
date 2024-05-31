@@ -118,14 +118,14 @@ footer{
 
 #resultados{
     display:grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto;
     align-items: center;
+    gap: 3px;
     justify-content: center;
 }
 
 #resultadohrs, #resultadodias{
-    margin-top: 0;
-    margin-left: 0;
+    margin: 0;
 }
 
 #oper_status{
@@ -156,4 +156,17 @@ footer{
     border: 5px solid rgb(181, 39, 105);
     background-color: rgb(181, 39, 105);
     border-radius:20px;
+}
+
+
+#links{
+    display: flex;
+    justify-content: center;
+    gap: 10px
+}
+
+#linkgithub, #linklinkedin{
+    display: flex;
+    justify-content: center;
+    gap: 3px;
 }
