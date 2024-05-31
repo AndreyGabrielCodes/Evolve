@@ -1,15 +1,15 @@
 //campos das matérias
-const q1uninter = document.querySelector("#q1uninter");
-const q1udemy = document.querySelector("#q1udemy");
-const q1livros = document.querySelector("#q1livros");
-const q2uninter = document.querySelector("#q2uninter");
-const q2udemy = document.querySelector("#q2udemy");
-const q2livros = document.querySelector("#q2livros");
+const q1bloco1 = document.querySelector("#q1bloco1");
+const q1bloco2 = document.querySelector("#q1bloco2");
+const q1bloco3 = document.querySelector("#q1bloco3");
+const q2bloco1 = document.querySelector("#q2bloco1");
+const q2bloco2 = document.querySelector("#q2bloco2");
+const q2bloco3 = document.querySelector("#q2bloco3");
 
 //checkbox de seleção de matéria
-const cpuninter = document.querySelector("#cpuninter");
-const cpudemy = document.querySelector("#cpudemy");
-const cplivros = document.querySelector("#cplivros");
+const checkbloco1 = document.querySelector("#checkbloco1");
+const checkbloco2 = document.querySelector("#checkbloco2");
+const checkbloco3 = document.querySelector("#checkbloco3");
 
 //seleção entre soma e média
 const operacao = document.querySelector("#seloperacao");
@@ -30,13 +30,13 @@ function status() {
     let statusint;
     let restatus = document.querySelector("#restatus");
     //valida marcação dos campos de seleção
-    if ((cpuninter.checked == false && cpudemy.checked == false && cplivros.checked == false)
-        ||(cpuninter.checked == false && cpudemy.checked == false)
-        || (cpuninter.checked == false && cplivros.checked == false)
-        || (cpudemy.checked == false && cplivros.checked == false))
-        {statusint = 1;}
+    if ((checkbloco1.checked == false && checkbloco2.checked == false && checkbloco3.checked == false)
+        || (checkbloco1.checked == false && checkbloco2.checked == false)
+        || (checkbloco1.checked == false && checkbloco3.checked == false)
+        || (checkbloco2.checked == false && checkbloco3.checked == false)) { statusint = 1; }
     else {
-        statusint = 0;}
+        statusint = 0;
+    }
     //altera o resultado dos sobblocos status, dias e horas
     if (statusint === 1)
         restatus.innerHTML = "Selecione 2 ou 3 matérias para calcular!";
@@ -58,136 +58,135 @@ function status() {
 
 //verifica se o campo horas ou dias está preenchido
 function valorexiste() {
-    const verq1_1 = q1uninter.value;
-    const verq1_2 = q1udemy.value;
-    const verq1_3 = q1livros.value;
-    const verq2_1 = q2uninter.value;
-    const verq2_2 = q2udemy.value;
-    const verq2_3 = q2livros.value;
+    const verq1_1 = q1bloco1.value;
+    const verq1_2 = q1bloco2.value;
+    const verq1_3 = q1bloco3.value;
+    const verq2_1 = q2bloco1.value;
+    const verq2_2 = q2bloco2.value;
+    const verq2_3 = q2bloco3.value;
     let q1valido;
     let q2valido;
     //valida preenchimento das questões das horas nas matérias selecionadas
-    if (cpuninter.checked == true && verq1_1 == ''){
+    if (checkbloco1.checked == true && verq1_1 == '') {
         q1valido = 0;
     }
-        else if (cpudemy.checked == true && verq1_2 == ''){
+    else if (checkbloco2.checked == true && verq1_2 == '') {
         q1valido = 0;
-        }
-        else if (cplivros.checked == true && verq1_3 == ''){
-            q1valido = 0;
-        }
-        else {
-            q1valido = 1;
-        }
+    }
+    else if (checkbloco3.checked == true && verq1_3 == '') {
+        q1valido = 0;
+    }
+    else {
+        q1valido = 1;
+    }
     //valida preenchimento das questões dos dias nas matérias selecionadas
-    if (cpuninter.checked == true && verq2_1 == ''){
+    if (checkbloco1.checked == true && verq2_1 == '') {
         q2valido = 0;
     }
-        else if (cpudemy.checked == true && verq2_2 == ''){
+    else if (checkbloco2.checked == true && verq2_2 == '') {
         q2valido = 0;
-        }
-        else if (cplivros.checked == true && verq2_3 == ''){
-            q2valido = 0;
-        }
-        else {
-            q2valido = 1;
-        }
+    }
+    else if (checkbloco3.checked == true && verq2_3 == '') {
+        q2valido = 0;
+    }
+    else {
+        q2valido = 1;
+    }
     //executa a function das horas
     if (q1valido === 1)
-            calchrs();
-        else {
-            reshrs.innerHTML = "";
-        }
+        calchrs();
+    else {
+        reshrs.innerHTML = "";
+    }
     //executa a function dos dias
     if (q2valido === 1)
         calcdias();
-        else {
-            resdias.innerHTML = "";}   
+    else {
+        resdias.innerHTML = "";
+    }
     //altera texto do status
-    if (q1valido === 0 && q2valido === 0) 
-        {restatus.innerHTML = "Insira valores em horas e/ou dias nas matérias selecionadas!"}
+    if (q1valido === 0 && q2valido === 0) { restatus.innerHTML = "Insira valores em horas e/ou dias nas matérias selecionadas!" }
     ;
     //altera exibição do subbloco do status
-    if (q1valido === 0 && q2valido === 0) 
-        {divstatus.style.display = "block";}
-    
-        else if (q1valido === 1 || q2valido === 1) {
-            divstatus.style.display = "none"; 
-        }
-    //altera a exibição do subbloco do resultado de horas
-    if (q1valido === 0) 
-        {divresulhrs.style.display = "none";
+    if (q1valido === 0 && q2valido === 0) { divstatus.style.display = "block"; }
+
+    else if (q1valido === 1 || q2valido === 1) {
+        divstatus.style.display = "none";
     }
-        else {
-            divresulhrs.style.display = "block";
-        }
+    //altera a exibição do subbloco do resultado de horas
+    if (q1valido === 0) {
+        divresulhrs.style.display = "none";
+    }
+    else {
+        divresulhrs.style.display = "block";
+    }
     //altera a exibição do subbloco do resultado de dias
-    if (q2valido === 0) 
+    if (q2valido === 0)
         divresuldias.style.display = 'none'
-    ;
-        else {
-            divresuldias.style.display = "block";
-        }
+            ;
+    else {
+        divresuldias.style.display = "block";
+    }
 }
 
 //executa o calculo de horas
 function calchrs() {
-        const vlq1uninter = parseInt(q1uninter.value);
-        const vlq1udemy = parseInt(q1udemy.value);
-        const vlq1livros = parseInt(q1livros.value);
-        let rescalchrs;
+    const vlq1bloco1 = parseInt(q1bloco1.value);
+    const vlq1bloco2 = parseInt(q1bloco2.value);
+    const vlq1bloco3 = parseInt(q1bloco3.value);
+    let rescalchrs;
     //soma os campos conforme marcação dos blocos das mátérias
     if (operacao.value === "Somar")
-        if (cpuninter.checked == true && cpudemy.checked == true && cplivros.checked == true)
-            rescalchrs = vlq1uninter + vlq1udemy + vlq1livros;
-        else if (cpuninter.checked == true && cpudemy.checked == true)
-            rescalchrs = vlq1uninter + vlq1udemy;
-        else if (cpuninter.checked == true && cplivros.checked == true)
-            rescalchrs = vlq1uninter + vlq1livros;
-        else if (cpudemy.checked == true && cplivros.checked == true)
-            rescalchrs = vlq1udemy + vlq1livros;
+        if (checkbloco1.checked == true && checkbloco2.checked == true && checkbloco3.checked == true)
+            rescalchrs = vlq1bloco1 + vlq1bloco2 + vlq1bloco3;
+        else if (checkbloco1.checked == true && checkbloco2.checked == true)
+            rescalchrs = vlq1bloco1 + vlq1bloco2;
+        else if (checkbloco1.checked == true && checkbloco3.checked == true)
+            rescalchrs = vlq1bloco1 + vlq1bloco3;
+        else if (checkbloco2.checked == true && checkbloco3.checked == true)
+            rescalchrs = vlq1bloco2 + vlq1bloco3;
     ;
     //faz a média dos campos conforme marcação dos blocos das mátérias
     if (operacao.value === "Media")
-        if (cpuninter.checked == true && cpudemy.checked == true && cplivros.checked == true)
-            rescalchrs = (vlq1uninter + vlq1udemy + vlq1livros) / 3;
-        else if (cpuninter.checked == true && cpudemy.checked == true)
-            rescalchrs = (vlq1uninter + vlq1udemy) / 2;
-        else if (cpuninter.checked == true && cplivros.checked == true)
-            rescalchrs = (vlq1uninter + vlq1livros) / 2;
-        else if (cpudemy.checked == true && cplivros.checked == true)
-            rescalchrs = (vlq1udemy + vlq1livros) / 2;     
+        if (checkbloco1.checked == true && checkbloco2.checked == true && checkbloco3.checked == true)
+            rescalchrs = (vlq1bloco1 + vlq1bloco2 + vlq1bloco3) / 3;
+        else if (checkbloco1.checked == true && checkbloco2.checked == true)
+            rescalchrs = (vlq1bloco1 + vlq1bloco2) / 2;
+        else if (checkbloco1.checked == true && checkbloco3.checked == true)
+            rescalchrs = (vlq1bloco1 + vlq1bloco3) / 2;
+        else if (checkbloco2.checked == true && checkbloco3.checked == true)
+            rescalchrs = (vlq1bloco2 + vlq1bloco3) / 2;
     ;
-    return (reshrs.innerHTML = rescalchrs + " horas totais");  
+    return (reshrs.innerHTML = rescalchrs + " horas totais");
 }
 
 //executa o calculo de dias
 function calcdias() {
-    const vlq2uninter = parseInt(q2uninter.value);
-    const vlq2udemy = parseInt(q2udemy.value);
-    const vlq2livros = parseInt(q2livros.value);
+    const vlq2bloco1 = parseInt(q2bloco1.value);
+    const vlq2bloco2 = parseInt(q2bloco2.value);
+    const vlq2bloco3 = parseInt(q2bloco3.value);
     let rescalcdias;
     //soma os campos conforme marcação dos blocos das mátérias
     if (operacao.value === "Somar")
-        if (cpuninter.checked == true && cpudemy.checked == true && cplivros.checked == true)
-            rescalcdias = vlq2uninter + vlq2udemy + vlq2livros;
-        else if (cpuninter.checked == true && cpudemy.checked == true)
-            rescalcdias = vlq2uninter + vlq2udemy;
-        else if (cpuninter.checked == true && cplivros.checked == true)
-            rescalcdias = vlq2uninter + vlq2livros;
-        else if (cpudemy.checked == true && cplivros.checked == true)
-            rescalcdias = vlq2udemy + vlq2livros;
+        if (checkbloco1.checked == true && checkbloco2.checked == true && checkbloco3.checked == true)
+            rescalcdias = vlq2bloco1 + vlq2bloco2 + vlq2bloco3;
+        else if (checkbloco1.checked == true && checkbloco2.checked == true)
+            rescalcdias = vlq2bloco1 + vlq2bloco2;
+        else if (checkbloco1.checked == true && checkbloco3.checked == true)
+            rescalcdias = vlq2bloco1 + vlq2bloco3;
+        else if (checkbloco2.checked == true && checkbloco3.checked == true)
+            rescalcdias = vlq2bloco2 + vlq2bloco3;
     ;
-     //faz a média dos campos conforme marcação dos blocos das mátérias
+    //faz a média dos campos conforme marcação dos blocos das mátérias
     if (operacao.value === "Media")
-        if (cpuninter.checked == true && cpudemy.checked == true && cplivros.checked == true)
-            rescalcdias = (vlq2uninter + vlq2udemy + vlq2livros) / 3;
-        else if (cpuninter.checked == true && cpudemy.checked == true)
-            rescalcdias = (vlq2uninter + vlq2udemy) / 2;
-        else if (cpuninter.checked == true && cplivros.checked == true)
-            rescalcdias = (vlq2uninter + vlq2livros) / 2;
-        else if (cpudemy.checked == true && cplivros.checked == true)
-            rescalcdias = (vlq2udemy + vlq2livros) / 2;     
+        if (checkbloco1.checked == true && checkbloco2.checked == true && checkbloco3.checked == true)
+            rescalcdias = (vlq2bloco1 + vlq2bloco2 + vlq2bloco3) / 3;
+        else if (checkbloco1.checked == true && checkbloco2.checked == true)
+            rescalcdias = (vlq2bloco1 + vlq2bloco2) / 2;
+        else if (checkbloco1.checked == true && checkbloco3.checked == true)
+            rescalcdias = (vlq2bloco1 + vlq2bloco3) / 2;
+        else if (checkbloco2.checked == true && checkbloco3.checked == true)
+            rescalcdias = (vlq2bloco2 + vlq2bloco3) / 2;
     ;
-    return (resdias.innerHTML = rescalcdias + " dias ao todo");  
+    return (resdias.innerHTML = rescalcdias + " dias ao todo");
 }
